@@ -1,0 +1,19 @@
+  buildconfig = "//BUILDCONFIG.gn"
+  # buildconfig = "//mini_chromium/build/BUILDCONFIG.gn"
+
+  check_targets = [
+    "//mini_chromium",  # Check everything in this subtree.
+    "//courgette/", # Check this specific target.
+    "//third_party/lzma_sdk",
+  ]
+
+  #root = "//:root"
+
+  #secondary_source = "//build/config/temporary_buildfiles/"
+
+  default_args = {
+    # Default to release builds for this project.
+    is_debug = false
+    is_component_build = false
+  }
+
