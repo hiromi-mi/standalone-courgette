@@ -4,6 +4,3 @@
 [submodule "mini_chromium"]
 	path = mini_chromium
 	url = ./mini_chromium/
-[submodule "tools"]
-	path = tools
-	url = ./tools/

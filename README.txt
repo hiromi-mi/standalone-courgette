@@ -1,5 +1,7 @@
 # Courgette Standalone
 
+Courgette をスタンドアロンビルド可能にした
+
 # Requirements
 - gn
 - third_party/lzma_sdk
