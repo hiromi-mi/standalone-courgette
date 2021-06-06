@@ -1,3 +1,11 @@
 [submodule "gn"]
 	path = gn
 	url = https://gn.googlesource.com/gn
+[submodule "mini_chromium"]
+	path = mini_chromium
+	url = https://github.com/hiromi-mi/mini_chromium
+	branch = make_standalone_v1
+[submodule "courgette"]
+	path = courgette
+	url = https://github.com/hiromi-mi/courgette
+	branch = make_standalone_v1
