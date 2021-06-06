@@ -1,0 +1,54 @@
+diff --color -u -r BUILD.gn BUILD.gn
+--- BUILD.gn	2021-06-06 23:23:55.000000000 +0900
++++ BUILD.gn	2021-06-06 23:49:32.793695266 +0900
+@@ -8,12 +8,12 @@
+ 
+ # Must be in a config because of how GN orders flags (otherwise -Wall will
+ # appear after this, and turn it back on).
+-config("clang_warnings") {
+-  if (is_clang) {
+-    # Upstream uses self-assignment to avoid warnings.
+-    cflags = [ "-Wno-self-assign" ]
+-  }
+-}
++#config("clang_warnings") {
++#  if (is_clang) {
++#    # Upstream uses self-assignment to avoid warnings.
++#    cflags = [ "-Wno-self-assign" ]
++#  }
++#}
+ 
+ config("lzma_defines") {
+   defines = [
+@@ -65,12 +65,12 @@
+     "Precomp.h",
+   ]
+ 
+-  configs -= [ "//build/config/compiler:chromium_code" ]
++  #configs -= [ "//build/config/compiler:chromium_code" ]
+   configs += [
+-    "//build/config/compiler:no_chromium_code",
++  #  "//build/config/compiler:no_chromium_code",
+ 
+     # Must be after no_chromium_code for warning flags to be ordered correctly.
+-    ":clang_warnings",
++    #":clang_warnings",
+     ":lzma_defines",
+   ]
+   public_configs = [ ":lzma_sdk_config" ]
+@@ -92,12 +92,12 @@
+ 
+   deps = [ ":lzma_sdk" ]
+ 
+-  configs -= [ "//build/config/compiler:chromium_code" ]
++  #configs -= [ "//build/config/compiler:chromium_code" ]
+   configs += [
+-    "//build/config/compiler:no_chromium_code",
++  #  "//build/config/compiler:no_chromium_code",
+ 
+     # Must be after no_chromium_code for warning flags to be ordered correctly.
+-    ":clang_warnings",
++    #":clang_warnings",
+     ":lzma_defines",
+   ]
+   public_configs = [ ":lzma_sdk_config" ]
