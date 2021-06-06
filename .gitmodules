@@ -4,3 +4,6 @@
 [submodule "mini_chromium"]
 	path = mini_chromium
 	url = ./mini_chromium/
+[submodule "gn"]
+	path = gn
+	url = https://gn.googlesource.com/gn
